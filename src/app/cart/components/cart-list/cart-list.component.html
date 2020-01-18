@@ -1,0 +1,25 @@
+<ul class="cart-list" *ngIf="orderedProducts; else loading">
+  <li class="cart-row cart-title">
+    <div class="cart-id">ID</div>
+    <div class="cart-icon">Icon</div>
+    <div class="cart-name">Name</div>
+    <div class="cart-label">Label</div>
+    <div class="cart-price">Price</div>
+    <div class="cart-transaction">Transaction</div>
+  </li>
+  <li *ngFor="let product of orderedProducts; trackBy: trackByProducts">
+    <app-cart-item [product]="product" class="cart-row"></app-cart-item>
+  </li>
+  <li class="cart-row cart-total">
+    <div class="cart-id">Total</div>
+    <div class="cart-icon"></div>
+    <div class="cart-name"></div>
+    <div class="cart-label"></div>
+    <div class="cart-price">{{getTotalCost() | currency}}</div>
+    <div class="cart-transaction"></div>
+  </li>
+</ul>
+<ng-template #loading>
+  <mat-progress-spinner color="accent" mode="indeterminate">
+  </mat-progress-spinner>
+</ng-template>

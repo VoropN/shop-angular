@@ -1,0 +1,13 @@
+.product {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &--item {
+      max-width: 300px;
+      width: 100%;
+      margin: 15px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.cart {
+  &-td {
+    text-overflow: ellipsis;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px)  {
+  .cart {
+    &-icon,
+    &-label {
+      display: none;
+    }
+
+    &-td {
+      padding: 3px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<ul class="product-list" *ngIf="(products$ | async) as products; else loading">
+  <li class="product-list--item" *ngFor="let product of products; trackBy: trackByProducts">
+    <app-product-item [product]="product"></app-product-item>
+  </li>
+</ul>
+<ng-template #loading>
+  <mat-progress-spinner color="accent" mode="indeterminate">
+  </mat-progress-spinner>
+</ng-template>

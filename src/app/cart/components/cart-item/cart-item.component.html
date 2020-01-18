@@ -1,0 +1,18 @@
+<div class="cart-td">{{product.id}}</div>
+<div class="cart-td cart-icon">
+  <img class="cart-image" mat-card-avatar src="assets/icons/product.svg" alt="product">
+</div>
+<div class="cart-td">{{product.name}}</div>
+<div class="cart-td cart-label">{{product.label}}</div>
+<div class="cart-td">{{product.price | currency}}</div>
+<div class="cart-td">
+  <button
+    color="primary"
+    mat-raised-button
+    class="product-button"
+    (click)="deleteFromCart()"
+    >
+    <img src="assets/icons/remove_shopping_cart-24px.svg" alt="img">
+    Delete
+  </button>
+</div>

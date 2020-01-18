@@ -1,0 +1,17 @@
+<mat-card>
+  <img class="icons" mat-card-image src="assets/icons/product.svg" alt="product">
+  <mat-card-title>{{product.name}}</mat-card-title>
+  <mat-card-subtitle>id: {{product.id}}</mat-card-subtitle>
+  <mat-card-content>label: {{product.label}}</mat-card-content>
+  <mat-card-content>price: {{product.price | currency}}</mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="accent" class="product-button" (click)="addToCart()" *ngIf="!isAddedToCart">
+      <img src="assets/icons/add_shopping_cart-24px.svg" alt="img">
+      Add
+    </button>
+    <button  mat-raised-button color="primary" class="product-button" (click)="deleteFromCart()" *ngIf="isAddedToCart">
+      <img src="assets/icons/remove_shopping_cart-24px.svg" alt="img">
+      Delete
+    </button>
+  </mat-card-actions>
+</mat-card>
